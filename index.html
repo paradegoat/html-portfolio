@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M-O-O-N</title>
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/5a5ac451f2.js"></script>
+  <script>
+  $("#safespace-modal").on("show", function () {
+    $("body").addClass("modal-open");
+  }).on("hidden", function () {
+    $("body").removeClass("modal-open")
+  });
+  </script>
+  <script>
+  $("#quiz-time-modal").on("show", function () {
+    $("body").addClass("modal-open");
+  }).on("hidden", function () {
+    $("body").removeClass("modal-open")
+  });
+  </script>
+  <script>
+  $("#pando-modal").on("show", function () {
+    $("body").addClass("modal-open");
+  }).on("hidden", function () {
+    $("body").removeClass("modal-open")
+  });
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        var hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+          window.location.hash = hash;
+        });
+      }
+    });
+  });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <ul class="menu-bar">
+        <li class="menu-button">
+          <a href="#home" class="bobber">home</a>
+        </li>
+        <li class="menu-button">
+          <a href="#smooth-about" class="bobber">about</a>
+        </li>
+        <li class="menu-button">
+          <a href="#smooth-work" class="bobber">work</a>
+        </li>
+        <li class="menu-button" >
+          <a href="#smooth-contact" class="bobber">contact</a>
+        </li>
+      </ul>
+      <ul class="icon-bar">
+        <li class="icon-button">
+          <a href="https://github.com/paradegoat" target="_blank"><img class="git bobber" src="./public/images/git-icon-stroke.png" /></a>
+        </li>
+        <li class="icon-button">
+          <a href="https://www.linkedin.com/in/geoff-humphreys" target="_blank"><img class="linkedin bobber" src="./public/images/linkein-icon-circle.png" /></a>
+        </li>
+        <li class="icon-button">
+          <a href=""><img class="portfolio bobber" src="./public/images/portfolio-icon-stroke.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+
+  <div class="background-banner">
+    <div class="title-block">
+      <p class="title">
+        Geoff Humphreys
+      </p>
+      <div class="dumb-quote">
+        <p>
+          Expanding our universe one line of code at a time
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="section-split">
+    <section class="section-split-img-one">
+    </section>
+    <section class="section-split-img-two">
+    </section>
+    <section class="section-split-img-three">
+    </section>
+  </div>
+  <div class="intro-section" id="smooth-about">
+
+    <div class="profile-pic">
+      <img src="./public/images/jemain.jpg" />
+    </div>
+    <div class="dumb-stuff-i-say">
+      <h2>Howdy</h2>
+      <p>
+        Hi there!  Thanks for giving this site a once over.  My name is Geoff Humphreys and I live in Durham, NC.  I got into programming to connect people with the things and communities they need. This world is what you make it, and I like adding to acompassionate, honest, and loving world. I'm not great at talking myself up but I'm confident in who I am and I will always take the time to make a thoughtful desicion that i can stand behing.  If you want to talk about programming, bee keeping, mastiffs or really anything else feel free to reach out.
+        (So that picture isn't me but it kinda looks like me.....Cameras and my face don't seem to work well together.)
+      </p>
+    </div>
+  </div>
+  <div class="skills-section" >
+    <div class="skills-bucket">
+      <div class="skills-icon ruby">
+        <img src="./public/images/ruby-icon-badge copy.png" />
+        <p>
+          Ruby on Rails
+        </p>
+      </div>
+      <div class="skills-icon">
+        <img src="./public/images/javascript-icon copy.png" />
+        <p>
+          JavaScript
+        </p>
+      </div>
+      <div class="skills-icon">
+        <img src="./public/images/nodeJS-badge-icon copy.png" />
+        <p>
+          Node.JS
+        </p>
+      </div>
+      <div class="skills-icon">
+        <img src="./public/images/postgresql-logo copy.png" />
+        <p>
+          PostgreSQL
+        </p>
+      </div>
+      <div class="skills-icon">
+        <img src="./public/images/mongoDB-leaf-icon copy.png" />
+        <p>
+          MongoDB
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="work-section" id="smooth-work">
+
+    <!--  -->
+    <!--  -->
+    <!-- Safe Space project                 -->
+    <!--  -->
+
+    <h2 class="work-header">Recent Projects</h2>
+
+    <div class="project-box">
+      <h3 class="project-title">Safe Space</h3>
+      <div class="container project-highlight">
+        <h4 class="project-description">A tool to document domestic violence and remain safe</h4>
+        <a data-toggle="modal" class="monitor" data-target="#safespace-modal">
+          <img src="/Users/heybuddy/desktop/Current projects to finish/portfolio_beta/public/images/website-icon.png" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="safespace-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content ">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title ">Safe Space</h4>
+          </div>
+          <div class="modal-screenshot">
+            <img class="safespace-screenshot scrolling" src="./public/images/safe-space-home copy.png" />
+          </div>
+          <div class="modal-body">
+            <ul class="modal-ul">
+              <li>JavaScript</li>
+              <li>Node.JS</li>
+              <li>Responsive</li>
+            </ul>
+            <p class="modal-para">
+            Safe Space is working mock-up for Empath360, a non-profit domestic violence center.  Safe Space allows users to store information about domestic violence experiences for future court dates.  It also allows users to call 911 or a safety contact with one button if they are in danger.
+            </p>
+            <div class="button-div">
+              <a href="https://github.com/Luv-Is-A-Gift/dom-vio-app" target="_blank">
+                <img src="public/images/coding-icon.png" class="code"/>
+              </a>
+              <a href="http://gamesafe.herokuapp.com/" target="_blank">
+                <img src="./public/images/live-site-icon.png" class="live-site"/>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--  -->
+    <!--  -->
+    <!-- Quiz Time project                    -->
+    <!--  -->
+    <!--  -->
+
+    <div class="project-box">
+      <h3 class="project-title">Quiz Time</h3>
+      <div class="container project-highlight">
+        <h4 class="project-description">A quiz game that will track and average your scores</h4>
+        <a data-toggle="modal" class="monitor" data-target="#quiz-time-modal">
+          <img src="/Users/heybuddy/desktop/Current projects to finish/portfolio_beta/public/images/website-icon.png" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="quiz-time-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content ">
+          <div class="modal-header">
+            <button type="button" class="close " data-dismiss="modal">&times;</button>
+            <h4 class="modal-title ">Quiz Time</h4>
+          </div>
+          <div class="modal-screenshot">
+            <img class="quiz-time-screenshot scrolling" src="./public/images/quiz-time_screenshot copy.png" alt="Quiz Time Homepage" />
+          </div>
+          <div class="modal-body ">
+            <ul class="modal-ul">
+              <li>Rudy on Rails</li>
+              <li>HTML/CSS</li>
+              <li>Bootstrap</li>
+            </ul>
+            <p class="modal-para">
+              Quiz-Time is a project that allows users to sign up and take quizes, track their scores and battle for the top score.  Admins are also able to write and publish new quizes.
+            </p>
+            <div class="button-div">
+
+              <a href="https://github.com/Taradiddle-TIY/tiy-quiz-show" target="_blank">
+                <img src="public/images/coding-icon.png" class="code"/>
+              </a>
+              <a href="https://floating-castle-29031.herokuapp.com/" target="_blank">
+                <img src="./public/images/live-site-icon.png" class="live-site"/>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--  -->
+    <!--  -->
+    <!-- Pando-Ra project                       -->
+    <!--  -->
+    <!--  -->
+
+    <div class="project-box">
+      <h3 class="project-title">Pando-Ra</h3>
+      <div class=" container project-highlight">
+        <h4 class="project-description">A SoundCloud Search Engine</h4>
+        <a data-toggle="modal" class="monitor" data-target="#pando-modal">
+          <img src="/Users/heybuddy/desktop/Current projects to finish/portfolio_beta/public/images/website-icon.png" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="pando-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content ">
+          <div class="modal-header">
+            <button type="button" class="close " data-dismiss="modal">&times;</button>
+            <h4 class="modal-title ">Pando-Ra</h4>
+          </div>
+          <div class="modal-screenshot">
+            <img class="pando-screenshot scrolling" src="./public/images/pando-ra_screenshot copy.png" alt="Pando-Ra SoundCloud streaming" />
+          </div>
+          <div class="modal-body">
+            <ul class="modal-ul">
+              <li>HTML/CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <p class="modal-para">
+              Pando-Ra is a project that searches the SoundCLoud API and displays artist and tracks and give the user the ability to play the song directly on the page.
+            </p>
+            <div class="button-div">
+
+              <a href="https://github.com/paradegoat/Pando-Ra" target="_blank">
+                <img src="public/images/coding-icon.png" class="code"/>
+              </a>
+              <a href="https://paradegoat.github.io/Pando-Ra/" target="_blank">
+                <img src="./public/images/live-site-icon.png" class="live-site"/>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="contact-section">
+    <div class="quick-contact" id="smooth-contact">
+      <section class="black-hole">
+
+      </section>
+      <p class="contact-title">
+        Lets connect!
+      </p>
+      <p class="reach-out">
+        Feel free to reach out:<br />
+        humphreys.geoff@gmail.com
+      </p>
+    </div>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,687 @@
+@font-face {
+    font-family: 'Red Moon Rising';
+    src: url('./public/fonts/.eot');
+    src: url('./public/fonts/red-moon/red_moon_rising.eot?#iefix') format('embedded-opentype'),
+         url('./public/fonts/red-moon/red_moon_rising.woff2') format('woff2'),
+         url('./public/fonts/red-moon/red_moon_rising.woff') format('woff'),
+         url('./public/fonts/red-moon/red_moon_rising.ttf') format('truetype'),
+         url('./public/fonts/red-moon/red_moon_rising') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moon Flower';
+    src: url('./public/fonts/moon-flower/moon_flower.eot');
+    src: url('./public/fonts/moon-flower/moon_flower.eot?#iefix') format('embedded-opentype'),
+         url('./public/fonts/moon-flower/moon_flower.woff2') format('woff2'),
+         url('./public/fonts/moon-flower/moon_flower.woff') format('woff'),
+         url('./public/fonts/moon-flower/moon_flower.ttf') format('truetype'),
+         url('./public/fonts/moon-flower/moon_flower') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space age';
+    src: url('./public/fonts/space-age/space_age.eot');
+    src: url('./public/fonts/space-age/space_age.eot?#iefix') format('embedded-opentype'),
+         url('./public/fonts/space-age/space_age.woff2') format('woff2'),
+         url('./public/fonts/space-age/space_age.woff') format('woff'),
+         url('./public/fonts/space-age/space_age.ttf') format('truetype'),
+         url('./public/fonts/space-age/space_age') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+/*////////////  NAVAGATION   /////////////////*/
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+
+
+.nav-bar{
+  height: 9vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  /*border: 1px dashed red;*/
+}
+
+.menu-bar{
+  order: 1;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+
+  /*border: 2px solid white;*/
+}
+
+.menu-button{
+  font-size: 2vw;
+  font-family: "Red Moon Rising", sans-serif;
+
+  order: 2;
+  margin: .4em;
+  /*padding: 1em;*/
+  padding: 2vw;
+  background: transparent;
+  /* Prevent highlight colour when element is tapped */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  /* Smooth fonts */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  border: 1px solid white;
+}
+
+.bobber:hover{
+  display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    color: white;
+
+    box-shadow: 0 0 1px transparent;
+}
+
+.bobber:hover, .bobber:focus, .bobber:active {
+    -webkit-animation-name: hvr-bob-float, hvr-bob;
+    animation-name: hvr-bob-float, hvr-bob;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+}
+
+.bobber{
+  text-decoration: none;
+  color: grey;
+  /*border: 1px solid yellow;*/
+}
+
+
+.icon-bar{
+  list-style-type: none;
+  order: 1;
+  display: flex;
+  flex-direction: row;
+  /*border: 2px solid green;*/
+}
+
+.icon-button{
+  order: 2;
+  margin: 0vw 2vw;
+  /*border: 2px solid orange;*/
+}
+
+.icon-button a{
+  text-decoration: none;
+  font-size: 3vw;
+}
+
+.git, .linkedin, .portfolio{
+  width: 3.5vw;
+  /*background-color: rgb(35, 32, 2);*/
+  /*border: 1px dashed blue;*/
+}
+
+.git:hover, .linkedin:hover, .portfolio:hover{
+  background-color: rgb(35, 32, 2);
+  opacity: .4;
+  border-radius: 100%;
+}
+
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+
+
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+/*////////////   MAIN CONTENT   ///////////////////*/
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+
+
+.background-banner{
+  background-image: url("./public/images/moons-background.jpg");
+  background-position: center;
+  /*background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;*/
+  border: 2px solid black;
+  height: 65vw;
+  z-index: 1;
+}
+
+.title-block{
+  color: white;
+  width: 90%;
+  margin-left: 5vw;
+  text-align: center;
+  z-index: 1;
+  /*border: 1px solid yellow;*/
+}
+
+.title{
+  margin-top: 8vw;
+  margin-bottom: 26vw;
+  font-size: 7vw;
+  font-family: "Red Moon Rising", sans-serif;
+}
+
+.dumb-quote{
+  z-index: 3;
+  border: 1px solid white;
+  color: white;
+  font-size: 4vw;
+  font-family: "Moon Flower", sans-serif;
+}
+
+.dumb-quote p {
+  margin: 0vw;
+}
+
+.section-split {
+  z-index: 4;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  top: -10vh;
+  height: 0vw;
+  /*border: 1px dashed white;*/
+}
+.section-split-img-one, .section-split-img-two,
+.section-split-img-three
+{
+  z-index: 4;
+  top: -11.5vw;
+  order: 1;
+  height: 9vw;
+  width: 9vw;
+  /*border: 1px solid black;*/
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.section-split-img-one{
+  background-image: url('./public/images/cosmos-icon.png');
+}
+
+.section-split-img-two{
+  background-image: url('./public/images/gods-shield-icon.png');
+}
+
+.section-split-img-three{
+  background-image: url('./public/images/knowledge-icon.png');
+}
+
+.section-split-img-one img, .section-split-img-two img,
+.section-split-img-three img {
+  display: none;
+}
+
+.intro-section{
+  display: flex;
+  flex-direction: row;
+  height: 30vw;
+  /*background-color: rgb(24, 24, 24);*/
+  background: black; /* For browsers that do not support gradients */
+   background: -webkit-linear-gradient(black, rgb(24, 24, 24)); /* For Safari 5.1 to 6.0 */
+   background: -o-linear-gradient(black, rgb(24, 24, 24)); /* For Opera 11.1 to 12.0 */
+   background: -moz-linear-gradient(black, rgb(24, 24, 24)); /* For Firefox 3.6 to 15 */
+   background: linear-gradient(black, rgb(24, 24, 24)); /* Standard syntax */
+  z-index: 1;
+  justify-content: space-around;
+  align-items:center;
+  border: .0001px solid black;
+}
+
+.profile-pic{
+  order: 1;
+  height: 26vw;
+  width: auto;
+  z-index: 2;
+  /*border: 2px dashed red;*/
+}
+
+.profile-pic img{
+  height: 26vw;
+  width: auto;
+}
+
+.dumb-stuff-i-say{
+  order: 1;
+  height: 27vw;
+  width: 58vw;
+  border: 2px groove white;
+  border-radius: 2%;
+  z-index: 3;
+}
+
+.dumb-stuff-i-say h2{
+  font-family: "Moon Flower", sans-serif;
+  color: white;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.dumb-stuff-i-say p{
+  padding: 0vw 2vw;
+  font-family: "Moon Flower", sans-serif;
+  color: white;
+  font-size: 2vw;
+}
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+/*////////////   SKILLS CONTENT   ///////////////////*/
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+
+.skills-section{
+  height: 19vw;
+  background-color: rgb(24, 24, 24);
+}
+
+.skills-bucket{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 15vw;
+  align-content: center;
+  padding-top: 5vw;
+
+  /*border: 1px solid yellow;*/
+}
+
+
+.skills-icon {
+  align-self: center;
+  order: 1;
+  height: 14vw;
+  width: auto;
+  /*border: 1px solid white;*/
+}
+
+.skills-icon img {
+  height: 8vw;
+  width: auto;
+}
+
+.skills-icon p{
+  /*display:table-caption;*/
+  text-align: center;
+  color: white;
+  font-family: "Moon Flower", sans-serif;
+  font-size: 2.5vw;
+  margin: 0vw;
+}
+
+.ruby img{
+
+}
+
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+
+
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+/*////////////   WORK CONTENT   ///////////////////*/
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+.work-section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 42vw;
+  background: linear-gradient(rgb(24, 24, 24), black); /* Standard syntax */
+  justify-content: space-around;
+  padding-bottom: 3vw;
+
+  /*border: 2px solid white;*/
+}
+
+.work-header{
+  order: 1;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-family: "Red Moon Rising", sans-serif;
+  font-size: 5vw;
+  /*border: 1px solid orange;*/
+  height: 6vw;
+  margin: 0vw;
+}
+
+.project-highlight {
+  opacity: .3;
+}
+
+.project-highlight:hover{
+  opacity: 1;
+}
+
+
+.project-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  order: 1;
+  /*border: 1px solid white;*/
+  border-width: thick;
+  width: 32%;
+  justify-content: center;
+}
+
+
+.project-title{
+  font-family: "Red Moon Rising", sans-serif;
+  text-decoration: none !important;
+  color: white;
+  font-size: 3vw;
+  /*border: 1px solid yellow;*/
+  height: 4vw;
+  width: 100%;
+  text-align: center;
+}
+
+.project-description{
+  color: white;
+  font-size: 2vw;
+  height: 3vw;
+  font-family: "Moon Flower", sans-serif;
+  text-align: center;
+}
+
+.monitor {
+  /*background-color: rgb(24, 24, 24);*/
+  background-color: transparent;
+  text-align: center;
+  opacity: .5;
+  /*border: 1px solid white;*/
+  float: left;
+}
+
+.monitor img {
+    width: 80%;
+}
+
+
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+
+
+
+body.modal-open {
+    overflow: visible;
+}
+
+body.viewport-lg {
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+.modal-dialog{
+  display: flex;
+  justify-content: center;
+  padding: 0vw;
+}
+
+.modal-content{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  order: 1;
+  height: 40vw;
+  /*width:00vw;*/
+  background-color: rgb(24, 24, 24) !important;
+}
+
+.modal-header{
+order: 1;
+width: 100%;
+padding: 1vw !important;
+
+}
+
+.modal-title{
+  text-align: center;
+  font-family: "Moon Flower", sans-serif;
+  font-size: 3vw !important;
+  font-weight: bolder;
+  color: white;
+}
+
+.modal-screenshot{
+  order: 2;
+  margin-right: 1em;
+  margin: 1vw;
+  padding: 0vw !important;
+  border: 2px dashed white;
+  width: 45%;
+  height: auto;
+}
+
+
+
+
+
+.modal-backdrop {
+    background-color: rgb(24, 24, 24);
+}
+
+
+
+.modal-body{
+  order: 2;
+  /*border: 1px solid blue;*/
+  height: 32vw;
+  width: 45%;
+  margin: 1vw;
+  margin-bottom:0vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.modal-ul{
+  font-family: "Moon Flower", sans-serif;
+  color: white;
+  font-size: 2vw;
+  list-style-type: none;
+}
+
+.modal-ul li{
+  border: 1px solid white;
+  padding: .25vw;
+  padding-left: 1vw;
+  margin: .5vw 0vw;
+}
+
+
+
+.modal-para{
+  font-family: "Moon Flower", sans-serif;
+  color: white;
+  font-size: 2vw;
+}
+
+.pando-screenshot, .safespace-screenshot, .quiz-time-screenshot{
+  width: 100%;
+}
+
+.button-div{
+  display: flex;
+  justify-content: center;
+  /*border: 2px solid blue;*/
+  /*margin-top: 1vw;*/
+  /*padding-bottom: 2vw;*/
+  justify-content: space-around;
+  padding-bottom: 1vw;
+}
+
+.code{
+  text-align: center;
+  height: 5vw;
+  background-color: white;
+  border-radius: 25%;
+  padding: .5vw;
+  /*border: 2px solid red;*/
+
+}
+
+.live-site{
+  text-align: center;
+  height: 5vw;
+  background-color: white;
+  border-radius: 25%;
+}
+
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+
+
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+/*////////////   CONTACT CONTENT   ///////////////////*/
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+
+.contact-section{
+  display: flex;
+  flex-direction: row;
+  height: 50vw;
+  background-image: url('./public/images/moon-contact-bg.jpg');
+  background-position: top;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.contact-title{
+  order: 1;
+  font-size: 4vw;
+  font-family: 'space age';
+  color: black;
+  text-align: center;
+  margin: 0vw;
+
+  /*border: 1px solid white;*/
+}
+
+.reach-out {
+  order: 1;
+  z-index: 5;
+  font-size: 2vw;
+  font-family: 'space age';
+  color: black;
+  text-align: center;
+  padding: 5vw 0vw 0vw 0vw;
+  width: 60%;
+  /*opacity: .4;*/
+  margin-left: 20%;
+  margin-bottom: 3vw;
+  border: 1px solid white;
+}
+
+/*.reach-out:hover{
+  opacity: 1;
+}*/
+
+.black-hole{
+  background-image: url('./public/images/003-stars copy.png');
+  width: .1vw;
+  height: .1vw;
+  padding: 4vw;
+  margin-left: 80vw;
+  margin-bottom: 20vw;
+  background-position: center;
+  background-size: cover;
+  opacity: .3;
+  /* Firefox */
+	-moz-transition: all 30s ease;
+	/* WebKit */
+	-webkit-transition: all 30s ease;
+	/* Opera */
+	-o-transition: all 30s ease;
+	/* Standard */
+	transition: all 30s ease;
+
+  /*border: 1px solid red;*/
+}
+
+.black-hole:hover{
+  -moz-transform: rotate(360deg) ;
+	/* WebKit */
+	-webkit-transform:  rotate(360deg);
+	/* Opera */
+	-o-transform: rotate(360deg) ;
+	/* Standard */
+	transform: rotate(360deg) ;
+}
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
