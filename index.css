@@ -314,20 +314,25 @@
   border: 2px groove white;
   border-radius: 2%;
   z-index: 3;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.dumb-stuff-i-say h2{
+/*.dumb-stuff-i-say h2{
   font-family: "Moon Flower", sans-serif;
   color: white;
   font-size: 2vw;
   text-align: center;
-}
+}*/
 
 .dumb-stuff-i-say p{
-  padding: 0vw 2vw;
+  padding: 2vw;
   font-family: "Moon Flower", sans-serif;
   color: white;
   font-size: 2vw;
+  z-index: 3;
+
+
 }
 /*////////////////////////////////////////////*/
 /*////////////////////////////////////////////*/
