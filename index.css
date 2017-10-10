@@ -316,6 +316,7 @@
   z-index: 3;
   overflow-y: scroll;
   overflow-x: hidden;
+  /*padding-bottom: vw;*/
 }
 
 /*.dumb-stuff-i-say h2{
@@ -645,12 +646,12 @@ padding: 1vw !important;
   font-family: 'space age';
   color: black;
   text-align: center;
-  padding: 5vw 0vw 0vw 0vw;
+  padding: 3vw 0vw 0vw 0vw;
   width: 60%;
   /*opacity: .4;*/
   margin-left: 20%;
   margin-bottom: 3vw;
-  border: 1px solid white;
+  border: 1px solid black;
 }
 
 /*.reach-out:hover{
