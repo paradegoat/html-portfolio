@@ -585,6 +585,9 @@ padding: 1vw !important;
   font-family: "Moon Flower", sans-serif;
   color: white;
   font-size: 2vw;
+  height: auto;
+  padding-left: 3vw;
+  padding-top: 1vw;
   overflow-y: scroll;
   overflow-x: hidden;
 }
