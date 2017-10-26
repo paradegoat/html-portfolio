@@ -831,7 +831,7 @@ padding: 1vw !important;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 0vw;
+    margin-bottom: 5vw;
     margin-top: 5vw;
     padding: 0vw;
     /*border: 2px solid green;*/
@@ -843,7 +843,7 @@ padding: 1vw !important;
 
   .background-banner{
     background-size: cover;
-    height: 60vw;
+    height: 65vw;
     z-index: 1;
   }
 
@@ -880,7 +880,8 @@ padding: 1vw !important;
     justify-content: space-around;
     height: 15vw;
     align-content: center;
-    padding-top: 10vw;
+    /*padding-top: 10vw;*/
+    /*border: 1px solid yellow;*/
     /*padding-bottom: 10vw;*/
 
 
