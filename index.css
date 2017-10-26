@@ -211,7 +211,7 @@
   background-repeat: no-repeat;
   background-color: black;
   border: 2px solid black;
-  height: 65vw;
+  height: 55vw;
   z-index: 1;
 }
 
@@ -257,18 +257,21 @@
   flex-wrap: nowrap;
   justify-content: space-around;
   top: -10vh;
-  height: 0vw;
+  height: 9vw;
+  padding-bottom: 9vw;
   /*border: 1px dashed white;*/
+  background: black; /* For browsers that do not support gradients */
+   background: -webkit-linear-gradient(black, rgb(24, 24, 24)); /* For Safari 5.1 to 6.0 */
+   background: -o-linear-gradient(black, rgb(24, 24, 24)); /* For Opera 11.1 to 12.0 */
+   background: -moz-linear-gradient(black, rgb(24, 24, 24)); /* For Firefox 3.6 to 15 */
+   background: linear-gradient(black, rgb(24, 24, 24)); /* Standard syntax */
 }
 .section-split-img-one, .section-split-img-two,
-.section-split-img-three
-{
+.section-split-img-three{
   z-index: 4;
-  top: -11.5vw;
   order: 1;
   height: 9vw;
   width: 9vw;
-  /*border: 1px solid black;*/
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -299,15 +302,15 @@
   flex-direction: row;
   height: 30vw;
   /*background-color: rgb(24, 24, 24);*/
-  background: black; /* For browsers that do not support gradients */
-   background: -webkit-linear-gradient(black, rgb(24, 24, 24)); /* For Safari 5.1 to 6.0 */
-   background: -o-linear-gradient(black, rgb(24, 24, 24)); /* For Opera 11.1 to 12.0 */
-   background: -moz-linear-gradient(black, rgb(24, 24, 24)); /* For Firefox 3.6 to 15 */
-   background: linear-gradient(black, rgb(24, 24, 24)); /* Standard syntax */
+  background: rgb(24, 24, 24);
+
   z-index: 1;
   justify-content: space-around;
   align-items:center;
-  border: .0001px solid black;
+  /*border: .0001px solid black;*/
+
+  /*border: 1px dashed white;*/
+
 }
 
 .profile-pic{
@@ -315,6 +318,7 @@
   height: 26vw;
   width: auto;
   z-index: 2;
+  margin-top: 3vw;
   /*border: 2px dashed red;*/
 }
 
@@ -325,6 +329,7 @@
 
 .dumb-stuff-i-say{
   order: 1;
+  margin-top: 3vw;
   height: 27vw;
   width: 58vw;
   border: 2px groove white;
