@@ -428,7 +428,6 @@
   justify-content: space-around;
   padding-bottom: 3vw;
 
-  /*border: 2px solid white;*/
 }
 
 .work-header{
@@ -441,7 +440,6 @@
   height: 6vw;
   margin-bottom: 3vw;
   border-bottom: 1px solid white;
-  /*border: 1px solid orange;*/
 }
 
 .project-highlight {
@@ -461,7 +459,6 @@
   border: .25vh solid white;
   width: 32%;
   justify-content: center;
-  /*border-bottom: none;*/
 }
 
 
@@ -470,7 +467,6 @@
   text-decoration: none !important;
   color: white;
   font-size: 5vw;
-  /*border: 1px solid yellow;*/
   height: 4vw;
   width: 100%;
   text-align: center;
@@ -485,11 +481,9 @@
 }
 
 .monitor {
-  /*background-color: rgb(24, 24, 24);*/
   background-color: transparent;
   text-align: center;
   opacity: .5;
-  /*border: 1px solid white;*/
   float: left;
 }
 
@@ -589,6 +583,10 @@ padding: 1vw !important;
   list-style-type: none;
 }
 
+.modal-ul h3 {
+  padding-left: 1vw;
+}
+
 .modal-ul li{
   border: 1px solid white;
   padding: .25vw;
@@ -596,8 +594,6 @@ padding: 1vw !important;
   margin: .5vw 0vw;
   width: 80%;
 }
-
-
 
 .modal-para{
   font-family: "Moon Flower", sans-serif;
@@ -655,42 +651,44 @@ padding: 1vw !important;
 /*////////////////////////////////////////////*/
 
 .contact-section{
-  height: 50vw;
+  display: flex;
+  /*height: 100vw;*/
   background-image: url('./public/images/moon-contact-bg.jpg');
   background-position: top;
-  align-items: flex-end;
-  /*justify-content: center;*/
+  padding-top: 20vw;
+  justify-content: center;
+  padding-bottom: 5vw;
 }
 
 .contact-title{
-  order: 1;
+  /*order: 1;*/
   font-size: 4vw;
   font-family: 'space age';
   color: black;
   text-align: center;
-  margin: 0vw;
+  margin-bottom: 2vw;
 
   /*border: 1px solid white;*/
 }
 
 .reach-out {
-  order: 1;
+  /*order: 1;*/
   /*z-index: 5;*/
   font-size: 2vw;
   font-family: 'space age';
   color: black;
   text-align: center;
-  padding: 3vw 0vw 0vw 0vw;
-  /*opacity: .4;*/
-  margin-left: 12vw;
-  margin-right: 12vw;
+  padding: 3vw 0vw 1vw 0vw;
+  /*margin-top: 10vw;*/
+  /*margin-right: 12vw;*/
   border: 1px solid black;
-  text-align: center;
+  text-decoration: none !important;
+
 }
 
-/*.reach-out:hover{
-  opacity: 1;
-}*/
+.reach-out:hover {
+  color: black;
+}
 
 .black-hole{
   background-image: url('./public/images/003-stars copy.png');
@@ -738,7 +736,7 @@ padding: 1vw !important;
     /**/
     height: auto;
     background: linear-gradient(rgb(24, 24, 24), black);
-    padding-bottom: 3vw;
+    /*padding-bottom: 10vw;*/
 
     /*border: 2px solid white;*/
   }
@@ -963,7 +961,7 @@ padding: 1vw !important;
     border: 1px solid white;
     padding: .25vw;
     padding-left: 0vw;
-text-align: center;
+    text-align: center;
     margin: 1vw 0vw;
 
   }
