@@ -616,7 +616,7 @@ padding: 1vw !important;
 
 .contact-title{
   font-size: 5vw;
-  font-family: 'space age', 'Josefin Slab', serif;;
+  font-family: 'space age', 'Josefin Slab', serif;
   color: white;
   text-align: center;
   margin-bottom: 2vw;
@@ -630,7 +630,7 @@ padding: 1vw !important;
 .reach-out {
   font-size: 2vw;
   color: white;
-  font-family: 'space age';
+  font-family: 'space age', 'Josefin Slab', serif;
   text-align: center;
   padding: 3vw 2vw 1vw 2vw;
   text-decoration: none !important;
