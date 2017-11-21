@@ -1,3 +1,25 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
 @font-face {
     font-family: 'Red Moon Rising';
     src: url('./public/fonts/.eot');
@@ -89,6 +111,7 @@
   flex-direction: row;
   justify-content: space-between;
   background-color: black;
+
   /*border: 1px dashed red;*/
 }
 
@@ -99,16 +122,15 @@
   flex-direction: row;
   padding: 0vw;
   width: 100%;
+
   /*border: 2px solid white;*/
 }
 
 .menu-button{
   font-size: 2vw;
   font-family: "Red Moon Rising", 'Josefin Slab', serif;
-
   order: 1;
   margin: .4em;
-  /*padding: 1em;*/
   padding: 2vw;
   background: transparent;
   /* Prevent highlight colour when element is tapped */
@@ -116,7 +138,6 @@
   /* Smooth fonts */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   border: 1px solid white;
 }
 
@@ -126,12 +147,18 @@
 
 .bobber:hover{
   display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    color: white;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  color: white;
+  box-shadow: 0 0 1px transparent;
+}
 
-    box-shadow: 0 0 1px transparent;
+.bobber{
+  text-decoration: none;
+  color: grey;
+
+  /*border: 1px solid yellow;*/
 }
 
 .bobber:hover, .bobber:focus, .bobber:active {
@@ -151,24 +178,19 @@
     animation-direction: normal, alternate;
 }
 
-.bobber{
-  text-decoration: none;
-  color: grey;
-  /*border: 1px solid yellow;*/
-}
-
-
 .icon-bar{
   list-style-type: none;
   order: 1;
   display: flex;
   flex-direction: row;
+
   /*border: 2px solid green;*/
 }
 
 .icon-button{
   order: 2;
   margin: 0vw 2vw;
+
   /*border: 2px solid orange;*/
 }
 
@@ -179,18 +201,13 @@
 
 .git, .linkedin, .portfolio{
   width: 3.5vw;
-  /*background-color: rgb(35, 32, 2);*/
+
   /*border: 1px dashed blue;*/
 }
 
 .git:hover, .linkedin:hover, .portfolio:hover{
   background-color: rgb(35, 32, 2);
   opacity: .4;
-  /*border-radius: 100%;*/
-}
-
-.desktop-hide{
-  display: none;
 }
 
 /*////////////////////////////////////////////*/
@@ -203,51 +220,50 @@
 /*////////////////////////////////////////////*/
 /*////////////////////////////////////////////*/
 
+.title-block{
+  color: white;
+  background-color: black;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+.title{
+  font-size: 7vw;
+  width: 90%;
+  font-family: "Red Moon Rising", 'Josefin Slab', serif;
+  border: 1px solid white;
+  margin: 0 !important;
+  margin-left: 5vw !important;
+  text-align: center;
+}
 
 .background-banner{
   background-image: url("./public/images/moons-background.jpg");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
   border: 2px solid black;
-  height: 55vw;
+  height: 25vw;
   z-index: 1;
 }
 
-.title-block{
+.quote-block{
   color: white;
-  width: 90%;
-  margin-left: 5vw;
-  text-align: center;
-  z-index: 1;
-  margin-bottom: 28vw;
-  margin-top: 3vw;
-  /*background-color: rgba(255, 255, 255, .2);*/
-  border: 1px solid white;
-
+  background-color: black;
+  padding-bottom: 5vw;
 }
 
-.title{
-  margin-top: 1vw;
-  /*margin-bottom: 26vw;*/
-  font-size: 7vw;
-  font-family: "Red Moon Rising", 'Josefin Slab', serif;
-}
-
-.dumb-quote{
-  z-index: 3;
+.expanding-quote{
+  background-color: black;
   border: 1px solid white;
   color: white;
   font-size: 4vw;
   text-align: center;
   font-family: "Moon Flower", 'Exo', sans-serif;
   width: 70%;
-  margin-left: 15vw;
-}
-
-.dumb-quote p {
-  margin: 0vw;
+  margin: 0 !important;
+  margin-left: 15vw !important;
 }
 
 .section-split {
@@ -259,13 +275,15 @@
   top: -10vh;
   height: 9vw;
   padding-bottom: 9vw;
-  /*border: 1px dashed white;*/
   background: black; /* For browsers that do not support gradients */
    background: -webkit-linear-gradient(black, rgb(24, 24, 24)); /* For Safari 5.1 to 6.0 */
    background: -o-linear-gradient(black, rgb(24, 24, 24)); /* For Opera 11.1 to 12.0 */
    background: -moz-linear-gradient(black, rgb(24, 24, 24)); /* For Firefox 3.6 to 15 */
    background: linear-gradient(black, rgb(24, 24, 24)); /* Standard syntax */
+
+   /*border: 1px dashed white;*/
 }
+
 .section-split-img-one, .section-split-img-two,
 .section-split-img-three{
   z-index: 4;
@@ -292,25 +310,16 @@
   background-image: url('./public/images/knowledge-icon.png');
 }
 
-.section-split-img-one img, .section-split-img-two img,
-.section-split-img-three img {
-  display: none;
-}
-
 .intro-section{
   display: flex;
   flex-direction: row;
   height: 30vw;
-  /*background-color: rgb(24, 24, 24);*/
   background: rgb(24, 24, 24);
-
   z-index: 1;
   justify-content: space-around;
   align-items:center;
-  /*border: .0001px solid black;*/
 
   /*border: 1px dashed white;*/
-
 }
 
 .profile-pic{
@@ -319,6 +328,7 @@
   width: auto;
   z-index: 2;
   margin-top: 3vw;
+
   /*border: 2px dashed red;*/
 }
 
@@ -327,7 +337,7 @@
   width: auto;
 }
 
-.dumb-stuff-i-say{
+.expanding-stuff-i-say{
   order: 1;
   margin-top: 3vw;
   height: 27vw;
@@ -337,17 +347,9 @@
   z-index: 3;
   overflow-y: scroll;
   overflow-x: hidden;
-  /*padding-bottom: vw;*/
 }
 
-/*.dumb-stuff-i-say h2{
-  font-family: "Moon Flower", 'Exo', sans-serif;]
-  color: white;
-  font-size: 2vw;
-  text-align: center;
-}*/
-
-.dumb-stuff-i-say p{
+.expanding-stuff-i-say p{
   padding: 2vw;
   font-family: "Moon Flower", 'Exo', sans-serif;
   color: white;
@@ -372,42 +374,15 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: 15vw;
   align-content: center;
   padding-top: 5vw;
 
   /*border: 1px solid yellow;*/
 }
 
-
-.skills-icon {
-  align-self: center;
-  order: 1;
-  height: 14vw;
-  /*width: 8vw;*/
-  /*border: 1px solid rgba(255, 255, 255, .2);*/
-}
-
-.skills-icon img {
-  height: 8vw;
-  width: 8vw;
-  /*border: 1px solid white;*/
-
-}
-
-.skills-icon p{
-  /*display:table-caption;*/
-  text-align: center;
+.devicon-rails-plain-wordmark, .devicon-postgresql-plain-wordmark, .devicon-mongodb-plain-wordmark, .devicon-nodejs-plain, .devicon-html5-plain-wordmark, .devicon-css3-plain-wordmark{
   color: white;
-  font-family: "Moon Flower", 'Exo', sans-serif;
-  font-size: 2.5vw;
-  margin: 0vw;
-  /*border: 1px solid white;*/
-}
-
-.ruby img{
-  height: 8vw;
-  width: auto;
+  font-size: 8vw;
 }
 
 /*////////////////////////////////////////////*/
@@ -423,11 +398,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 42vw;
+  height: 55vw;
   background: linear-gradient(rgb(24, 24, 24), black); /* Standard syntax */
   justify-content: space-around;
   padding-bottom: 3vw;
-
 }
 
 .work-header{
@@ -442,15 +416,6 @@
   border-bottom: 1px solid white;
 }
 
-.project-highlight {
-  opacity: .3;
-}
-
-.project-highlight:hover{
-  opacity: 1;
-}
-
-
 .project-box{
   display: flex;
   flex-direction: row;
@@ -461,7 +426,6 @@
   justify-content: center;
 }
 
-
 .project-title{
   font-family: "Red Moon Rising", 'Josefin Slab', serif;
   text-decoration: none !important;
@@ -470,6 +434,14 @@
   height: 4vw;
   width: 100%;
   text-align: center;
+}
+
+.project-highlight {
+  opacity: .3;
+}
+
+.project-highlight:hover{
+  opacity: 1;
 }
 
 .project-description{
@@ -494,7 +466,11 @@
 
 /*////////////////////////////////////////////*/
 /*////////////////////////////////////////////*/
-
+/*////////////////////////////////////////////*/
+/*/////////       MODAL SECTION    ////////////////*/
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
 
 
 body.modal-open {
@@ -505,21 +481,17 @@ body.viewport-lg {
     position: absolute;
 }
 
-
 .modal-dialog{
   display: flex;
   justify-content: center;
   padding: 0vw;
 }
 
-
 .modal-content{
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   order: 1;
-  /*height: 40vw;*/
-  /*width:00vw;*/
   background-color: rgb(24, 24, 24) !important;
 }
 
@@ -527,7 +499,6 @@ body.viewport-lg {
 order: 1;
 width: 100%;
 padding: 1vw !important;
-
 }
 
 .modal-title{
@@ -538,8 +509,6 @@ padding: 1vw !important;
   color: white;
 }
 
-
-
 .modal-backdrop {
     background-color: rgb(24, 24, 24);
 }
@@ -548,32 +517,29 @@ padding: 1vw !important;
   display: flex;
   flex-wrap: nowrap;
   order: 2;
-  /*border: 1px solid blue;*/
   height: 32vw;
-  /*width: 45%;*/
   margin: 1vw;
   margin-bottom:0vw;
-  /*overflow-y: scroll;
-  overflow-x: hidden;*/
 }
 
 .modal-screenshot{
   order: 1;
   margin-right: 1em;
-  /*margin: 1vw;*/
   padding: 0vw !important;
-  /*border: 2px dashed white;*/
   width: 48%;
   height: auto;
   overflow-y: scroll;
   overflow-x: hidden;
+
+  /*border: 2px dashed white;*/
 }
 
 .modal-text{
   order: 2;
-  /*border: 2px dashed white;*/
   width: 52%;
   overflow-y: scroll;
+
+  /*border: 2px dashed white;*/
 }
 
 .modal-ul{
@@ -613,9 +579,6 @@ padding: 1vw !important;
   display: flex;
   justify-content: center;
   order: 2;
-  /*border: 2px solid blue;*/
-  /*margin-top: 1vw;*/
-  /*padding-bottom: 2vw;*/
   justify-content: space-around;
   padding-bottom: 1vw;
   width: 100%;
@@ -628,8 +591,8 @@ padding: 1vw !important;
   background-color: white;
   border-radius: 25%;
   padding: .5vw;
-  /*border: 2px solid red;*/
 
+  /*border: 2px solid red;*/
 }
 
 .live-site{
@@ -650,93 +613,75 @@ padding: 1vw !important;
 /*////////////////////////////////////////////*/
 /*////////////////////////////////////////////*/
 
-.contact-section{
-  display: flex;
-  /*height: 100vw;*/
-  background-image: url('./public/images/moon-contact-bg.jpg');
-  background-position: top;
-  padding-top: 20vw;
-  justify-content: center;
-  padding-bottom: 5vw;
-}
 
 .contact-title{
-  /*order: 1;*/
-  font-size: 4vw;
+  font-size: 5vw;
   font-family: 'space age';
-  color: black;
+  color: white;
   text-align: center;
   margin-bottom: 2vw;
+  background: black;
+  padding-top: 10vw;
+  margin-bottom: 0vw !important;
 
   /*border: 1px solid white;*/
 }
 
 .reach-out {
-  /*order: 1;*/
-  /*z-index: 5;*/
   font-size: 2vw;
+  color: white;
   font-family: 'space age';
-  color: black;
   text-align: center;
-  padding: 3vw 0vw 1vw 0vw;
-  /*margin-top: 10vw;*/
-  /*margin-right: 12vw;*/
-  border: 1px solid black;
+  padding: 3vw 2vw 1vw 2vw;
   text-decoration: none !important;
-
+  border: 1px solid white;
 }
 
 .reach-out:hover {
-  color: black;
+  color: red;
 }
 
-.black-hole{
-  background-image: url('./public/images/003-stars copy.png');
-  width: .1vw;
-  height: .1vw;
-  padding: 4vw;
-  margin-left: 80vw;
-  margin-bottom: 20vw;
-  background-position: center;
-  background-size: cover;
-  opacity: .3;
-  /* Firefox */
-	-moz-transition: all 30s ease;
-	/* WebKit */
-	-webkit-transition: all 30s ease;
-	/* Opera */
-	-o-transition: all 30s ease;
-	/* Standard */
-	transition: all 30s ease;
+.bottom-icon-bar{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0vw !important;
+  background-color: black;
+  padding-top: 6vw;
+  height: 10vw;
 
-  /*border: 1px solid red;*/
+  /*border: 2px solid green;*/
 }
 
-.black-hole:hover{
-  -moz-transform: rotate(360deg) ;
-	/* WebKit */
-	-webkit-transform:  rotate(360deg);
-	/* Opera */
-	-o-transform: rotate(360deg) ;
-	/* Standard */
-	transform: rotate(360deg) ;
+.bottom-bobber{
+  width: 7vw;
 }
+
+.footer-moon{
+  background-image: url('./public/images/moon-contact-bg.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 35vw;;
+
+  /*border: 1px solid blue;*/
+}
+
 /*////////////////////////////////////////////*/
+                                                  /*////////////////////////////////////////////*/
 /*////////////////////////////////////////////*/
-
-
+                                                  /*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
+                                                  /*////////////////////////////////////////////*/
+/*////////////////////////////////////////////*/
 @media screen and (max-width: 544px) {
 
   .work-section{
     display: flex;
-    /**/
     flex-direction: column;
-    /**/
     flex-wrap:nowrap;
-    /**/
     height: auto;
     background: linear-gradient(rgb(24, 24, 24), black);
-    /*padding-bottom: 10vw;*/
 
     /*border: 2px solid white;*/
   }
@@ -748,23 +693,16 @@ padding: 1vw !important;
     flex-direction: row;
     flex-wrap: wrap;
     order: 1;
-    /**/
     border: .25vh solid white;
-    /**/
     width: 80%;
-    /**/
     justify-content: center;
-    /*border-bottom: none;*/
   }
 
   .monitor {
-    /*background-color: rgb(24, 24, 24);*/
     background-color: transparent;
     text-align: center;
     opacity: .5;
     padding-top: 5vw;
-    /*border: 1px solid white;*/
-    /*float: left;*/
   }
 
   .monitor img {
@@ -784,16 +722,13 @@ padding: 1vw !important;
     text-decoration: none !important;
     color: white;
     font-size: 7vw;
-    /*border: 1px solid yellow;*/
     height: 4vw;
     width: 100%;
     text-align: center;
   }
 
   .git, .linkedin, .portfolio{
-    width: 7.5vw;
-    /*background-color: rgb(35, 32, 2);*/
-    /*border: 1px dashed blue;*/
+    width: 15vw;
   }
 
   .menu-button{
@@ -803,14 +738,13 @@ padding: 1vw !important;
 
   .nav-bar{
     height: 18vw;
-    /*display: flex;*/
     flex-direction: column;
     justify-content: space-between;
     background-color: black;
-    /*border: 1px dashed red;*/
   }
 
   .mobile-buttons{
+    padding-top: 10vw;
     flex-direction: column;
     justify-content: space-between;
     background-color: black;
@@ -825,34 +759,16 @@ padding: 1vw !important;
     padding: 0vw;
     width: 100%;
     margin-bottom: 0vw;
+
     /*border: 2px solid white;*/
   }
 
-  .icon-bar{
-    list-style-type: none;
-    order: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 5vw;
-    margin-top: 5vw;
-    padding: 0vw;
-    /*border: 2px solid green;*/
+  .desktop-hide{
+    background-color: transparent;
   }
 
   .intro-section, .section-split, .mobile-hide{
     display: none;
-  }
-
-  .background-banner{
-    background-size: cover;
-    height: 65vw;
-    z-index: 1;
-  }
-
-  .title-block{
-    margin-bottom: 25vw;
-    margin-top: 3vw;
   }
 
   .title{
@@ -867,38 +783,37 @@ padding: 1vw !important;
     height: 9vw;
     margin: 0vw;
     border-bottom: 1px solid white;
-    /*border: 1px solid orange;*/
-  }
 
-  .modal-lg{
-    height: 80%;
+    /*border: 1px solid orange;*/
   }
 
   .skills-bucket{
     background: linear-gradient( black, rgb(24, 24, 24)); /* Standard syntax */
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     height: 15vw;
     align-content: center;
-    /*padding-top: 10vw;*/
-    /*border: 1px solid yellow;*/
-    /*padding-bottom: 10vw;*/
-
 
     /*border: 1px solid yellow;*/
   }
 
-  /*//////////////////////////////////*/
+  /*////////////////////////////////////////////*/
+  /*////////////////////////////////////////////*/
+  /*////////////   MODAL CONTENT   ///////////////////*/
+  /*////////////////////////////////////////////*/
+  /*////////////////////////////////////////////*/
+
+  .modal-lg{
+    height: 80%;
+  }
+
   .modal-content{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     order: 1;
-    /*height: 40vw;*/
-    /*width:00vw;*/
     background-color: rgb(24, 24, 24) !important;
   }
 
@@ -917,16 +832,12 @@ padding: 1vw !important;
     color: white;
   }
 
-
-
   .modal-backdrop {
       background-color: rgb(24, 24, 24);
   }
 
   .modal-body{
-
     order: 2;
-    /*border: 1px solid blue;*/
     height: 82vw;
     margin: 1vw;
     margin-bottom:0vw;
@@ -954,7 +865,6 @@ padding: 1vw !important;
     list-style-type: none;
     width: 100%;
     padding-left: 1vw;
-
   }
 
   .modal-ul li{
@@ -963,10 +873,7 @@ padding: 1vw !important;
     padding-left: 0vw;
     text-align: center;
     margin: 1vw 0vw;
-
   }
-
-
 
   .modal-para{
     font-family: "Moon Flower", 'Exo', sans-serif;
@@ -991,7 +898,6 @@ padding: 1vw !important;
     border-radius: 10%;
     padding: .5vw 6vw;;
     margin-top: 4vw;
-
   }
 
   .live-site{
@@ -999,12 +905,29 @@ padding: 1vw !important;
     border-radius: 10%;
     padding: .5vw 6vw;;
     margin-top: 4vw;
+  }
 
+  /*////////////////////////////////////////////*/
+  /*////////////////////////////////////////////*/
+  /*////////////   CONTACT CONTENT   ///////////////////*/
+  /*////////////////////////////////////////////*/
+  /*////////////////////////////////////////////*/
+
+
+  .bottom-icon-bar{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0vw !important;
+    background-color: black;
+
+    /*border: 2px solid green;*/
   }
 
   .reach-out {
     font-size: 4vw;
-    padding: 1vw 0vw 0vw 0vw;
+    padding: 1vw 2vw 1vw 2vw;
     margin-left: 6vw;
     margin-right: 6vw;
   }
