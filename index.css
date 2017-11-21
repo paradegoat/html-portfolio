@@ -787,6 +787,10 @@ padding: 1vw !important;
     /*border: 1px solid orange;*/
   }
 
+	.project-highlight {
+	  opacity: 1;
+	}
+
   .skills-bucket{
     background: linear-gradient( black, rgb(24, 24, 24)); /* Standard syntax */
     display: flex;
