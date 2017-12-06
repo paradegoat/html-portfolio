@@ -340,7 +340,7 @@ time, mark, audio, video {
   margin-top: 3vw;
   height: 27vw;
   width: 58vw;
-  border: 2px groove white;
+  border: 2px solid white;
   border-radius: 2%;
   z-index: 3;
   overflow-y: scroll;
@@ -654,6 +654,14 @@ padding: 1vw !important;
 
 .bottom-bobber{
   width: 7vw;
+}
+
+.bottom-resume{
+	margin-left: 16vw;
+}
+
+.bottom-linkedin{
+	margin-right: 16vw;
 }
 
 .footer-moon{
