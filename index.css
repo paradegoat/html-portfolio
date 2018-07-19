@@ -340,7 +340,7 @@ time, mark, audio, video {
   margin-top: 3vw;
   height: 27vw;
   width: 58vw;
-  border: 2px solid white;
+  border: 2px solid  white;
   border-radius: 2%;
   z-index: 3;
   overflow-y: scroll;
@@ -422,6 +422,8 @@ time, mark, audio, video {
   border: .25vh solid white;
   width: 32%;
   justify-content: center;
+	padding-bottom: 3vw;
+
 }
 
 .project-title{
